@@ -40,6 +40,18 @@ public class Lista<T> {
         }
         return false;
     }
+    public int ultimoIndice(T elemento){
+        int ultimo = -1;
+
+        for(int i =0; i< tamanho; i++){
+            if(elementos[i].equals(elemento))
+                ultimo = i;
+        }
+        if(ultimo == -1)
+            return -1;
+        else
+            return ultimo;
+    }
 
     public boolean adiciona(T elemento) {
         aumentaCapacidade();
