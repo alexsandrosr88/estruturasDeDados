@@ -1,13 +1,11 @@
-package com.cursoLoiane.estruturas.vetor;
+package com.loiane.estruturasdados.vetor;
 
-import java.util.Arrays;
-
-public class Vetor {
-    private String[] elementos;
+public class VetorObjetos {
+    private Object[] elementos;
     private int tamanho;
 
-    public Vetor(int capacidade) {
-        elementos = new String[capacidade];
+    public VetorObjetos(int capacidade) {
+        elementos = new Object[capacidade];
         tamanho = 0;
     }
 
@@ -15,19 +13,20 @@ public class Vetor {
         return tamanho;
     }
 
-    public String busca(int posicao) {
+    public Object busca(int posicao) {
         validaPosicao(posicao);
         return elementos[posicao];
     }
 
-    public int busca(String elemento) {
+    public int busca(Object elemento) {
         for (int i = 0; i < tamanho; i++) {
             if (elementos[i].equals(elemento))
                 return i;
         }
         return -1;
     }
-    public boolean adiciona(String elemento) {
+
+    public boolean adiciona(Object elemento) {
         aumentaCapacidade();
         if (tamanho < elementos.length) {
             elementos[tamanho] = elemento;
@@ -37,32 +36,34 @@ public class Vetor {
         return false;
     }
 
-    public boolean adiciona(int posicao, String elemento) {
+    public boolean adiciona(int posicao, Object elemento) {
 
         validaPosicao(posicao);
 
         aumentaCapacidade();
-        for (int i = tamanho-1; i >= posicao; i--){
-            elementos[i+1] = elementos[i];
+        for (int i = tamanho - 1; i >= posicao; i--) {
+            elementos[i + 1] = elementos[i];
         }
         elementos[posicao] = elemento;
         tamanho++;
         return true;
     }
+
     public void remove(int posicao) {
 
         validaPosicao(posicao);
 
-        for (int i = posicao; i < tamanho; i++){
+        for (int i = posicao; i < tamanho; i++) {
             elementos[i] = elementos[i + 1];
         }
-        elementos[tamanho -1] = null;
+        elementos[tamanho - 1] = null;
         tamanho--;
     }
-    public void remove(String elemento) {
+
+    public void remove(Object elemento) {
         int posicao = busca(elemento);
 
-        if(posicao > -1) {
+        if (posicao > -1) {
 
             validaPosicao(posicao);
 
@@ -71,22 +72,22 @@ public class Vetor {
             }
             elementos[tamanho - 1] = null;
             tamanho--;
-        }
-        else
+        } else
             System.out.println("O Elemento informado não existe no vetor!");
     }
 
-    private void aumentaCapacidade(){
-        if(tamanho == elementos.length){
-            String[] elementosNovos = new String[elementos.length*2];
-            for(int i =0; i< elementos.length; i++){
+    private void aumentaCapacidade() {
+        if (tamanho == elementos.length) {
+            Object[] elementosNovos = new Object[elementos.length * 2];
+            for (int i = 0; i < elementos.length; i++) {
                 elementosNovos[i] = elementos[i];
             }
             elementos = elementosNovos;
         }
     }
-    private void validaPosicao(int posicao){
-        if (!(posicao >= 0 && posicao < tamanho)){
+
+    private void validaPosicao(int posicao) {
+        if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição inválida!");
         }
     }

@@ -1,4 +1,4 @@
-package com.cursoLoiane.estruturas.vetor;
+package com.loiane.estruturasdados.vetor;
 
 import java.lang.reflect.Array;
 
@@ -10,6 +10,7 @@ public class Lista<T> {
         elementos = (T[]) new Object[capacidade];
         tamanho = 0;
     }
+    //Outra forma de declarar o contrutor e menos elegante.
 //    public Lista(int capacidade, Class<T> tipoClasse) {
 //        elementos = (T[]) Array.newInstance(tipoClasse, capacidade);
 //        tamanho = 0;
@@ -31,6 +32,15 @@ public class Lista<T> {
         }
         return -1;
     }
+
+    public boolean contem(T elemento) {
+        for (int i = 0; i < tamanho; i++) {
+            if (elementos[i].equals(elemento))
+                return true;
+        }
+        return false;
+    }
+
     public boolean adiciona(T elemento) {
         aumentaCapacidade();
         if (tamanho < elementos.length) {
@@ -46,27 +56,29 @@ public class Lista<T> {
         validaPosicao(posicao);
 
         aumentaCapacidade();
-        for (int i = tamanho-1; i >= posicao; i--){
-            elementos[i+1] = elementos[i];
+        for (int i = tamanho - 1; i >= posicao; i--) {
+            elementos[i + 1] = elementos[i];
         }
         elementos[posicao] = elemento;
         tamanho++;
         return true;
     }
+
     public void remove(int posicao) {
 
         validaPosicao(posicao);
 
-        for (int i = posicao; i < tamanho; i++){
+        for (int i = posicao; i < tamanho; i++) {
             elementos[i] = elementos[i + 1];
         }
-        elementos[tamanho -1] = null;
+        elementos[tamanho - 1] = null;
         tamanho--;
     }
+
     public void remove(T elemento) {
         int posicao = busca(elemento);
 
-        if(posicao > -1) {
+        if (posicao > -1) {
 
             validaPosicao(posicao);
 
@@ -75,22 +87,22 @@ public class Lista<T> {
             }
             elementos[tamanho - 1] = null;
             tamanho--;
-        }
-        else
+        } else
             System.out.println("O Elemento informado não existe no vetor!");
     }
 
-    private void aumentaCapacidade(){
-        if(tamanho == elementos.length){
-            T[] elementosNovos = (T[]) new Object[elementos.length*2];
-            for(int i =0; i< elementos.length; i++){
+    private void aumentaCapacidade() {
+        if (tamanho == elementos.length) {
+            T[] elementosNovos = (T[]) new Object[elementos.length * 2];
+            for (int i = 0; i < elementos.length; i++) {
                 elementosNovos[i] = elementos[i];
             }
             elementos = elementosNovos;
         }
     }
-    private void validaPosicao(int posicao){
-        if (!(posicao >= 0 && posicao < tamanho)){
+
+    private void validaPosicao(int posicao) {
+        if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição inválida!");
         }
     }

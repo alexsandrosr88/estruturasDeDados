@@ -1,7 +1,6 @@
-package com.loiane.estruturadados.vetor.teste;
+package com.loiane.estruturasdados.vetor.teste;
 
-import com.cursoLoiane.estruturas.vetor.Vetor;
-import com.sun.jdi.StringReference;
+import com.loiane.estruturasdados.vetor.Vetor;
 
 public class Aula03 {
     public static void main(String[] args){
@@ -11,7 +10,6 @@ public class Aula03 {
         vetor.adiciona("elemento 2");
         vetor.adiciona("elemento 3");
 
-
-
+        System.out.println(vetor);
     }
 }

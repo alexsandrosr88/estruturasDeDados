@@ -1,8 +1,8 @@
-package com.loiane.estruturadados.vetor.teste;
+package com.loiane.estruturasdados.vetor.teste;
 
-import com.cursoLoiane.estruturas.vetor.Vetor;
+import com.loiane.estruturasdados.vetor.Vetor;
 
-public class Aula08 {
+public class Aula09 {
     public static void main(String[] args) {
         Vetor vetor =  new Vetor(3);
 
@@ -13,5 +13,16 @@ public class Aula08 {
         vetor.adiciona("G");
 
         System.out.println(vetor);
+
+        vetor.remove(3);
+
+        System.out.println(vetor);
+
+        vetor.remove("A");
+
+        System.out.println(vetor);
+
+
+
     }
 }

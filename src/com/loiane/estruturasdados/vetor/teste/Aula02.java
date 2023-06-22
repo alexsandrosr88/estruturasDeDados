@@ -1,5 +1,6 @@
-package com.loiane.estruturadados.vetor.teste;
-import com.cursoLoiane.estruturas.vetor.Vetor;
+package com.loiane.estruturasdados.vetor.teste;
+import com.loiane.estruturasdados.vetor.Vetor;
+
 public class Aula02 {
     public static void main(String[] args) {
         Vetor vetor = new Vetor(5);

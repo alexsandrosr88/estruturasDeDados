@@ -1,7 +1,6 @@
-package com.loiane.estruturadados.vetor.teste;
+package com.loiane.estruturasdados.vetor.teste;
 
-import com.cursoLoiane.estruturas.vetor.Lista;
-import com.cursoLoiane.estruturas.vetor.VetorObjetos;
+import com.loiane.estruturasdados.vetor.Lista;
 
 public class Aula11 {
     public static void main(String[] args) {
