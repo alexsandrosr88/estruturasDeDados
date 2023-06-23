@@ -1,6 +1,8 @@
 package com.loiane.estruturasdados.vetor;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Objects;
 
 public class Lista<T> {
     private T[] elementos;
@@ -20,7 +22,7 @@ public class Lista<T> {
         return tamanho;
     }
 
-    public Object busca(int posicao) {
+    public T busca(int posicao) {
         validaPosicao(posicao);
         return elementos[posicao];
     }
@@ -65,9 +67,8 @@ public class Lista<T> {
 
     public boolean adiciona(int posicao, T elemento) {
 
-        validaPosicao(posicao);
-
         aumentaCapacidade();
+        //validaPosicao(posicao);
         for (int i = tamanho - 1; i >= posicao; i--) {
             elementos[i + 1] = elementos[i];
         }
@@ -140,7 +141,7 @@ public class Lista<T> {
 
         for (int i = 0; i < tamanho - 1; i++) {
             s.append(elementos[i]);
-            s.append(",");
+            s.append(",\n");
         }
         if (tamanho > 0) {
             s.append(elementos[tamanho - 1]);
@@ -148,5 +149,20 @@ public class Lista<T> {
         s.append("]");
 
         return s.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Lista<?> lista = (Lista<?>) o;
+        return getTamanho() == lista.getTamanho() && Arrays.equals(elementos, lista.elementos);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(getTamanho());
+        result = 31 * result + Arrays.hashCode(elementos);
+        return result;
     }
 }

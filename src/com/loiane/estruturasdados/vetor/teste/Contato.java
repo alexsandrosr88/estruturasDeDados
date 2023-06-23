@@ -53,14 +53,19 @@ public class Contato {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Contato contato = (Contato) o;
-        return Objects.equals(getNome(), contato.getNome()) &&
-                Objects.equals(getTelefone(), contato.getTelefone()) &&
-                Objects.equals(getEmail(), contato.getEmail());
+
+        if (!getNome().equals(contato.getNome())) return false;
+        if (!getTelefone().equals(contato.getTelefone())) return false;
+        return getEmail().equals(contato.getEmail());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getNome(), getTelefone(), getEmail());
+        int result = getNome().hashCode();
+        result = 31 * result + getTelefone().hashCode();
+        result = 31 * result + getEmail().hashCode();
+        return result;
     }
 }
