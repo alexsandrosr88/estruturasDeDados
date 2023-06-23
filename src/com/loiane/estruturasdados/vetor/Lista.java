@@ -103,6 +103,13 @@ public class Lista<T> {
             return false;
     }
 
+    public void limpar(){
+        for (int i =0; i < tamanho-1; i++){
+            elementos[i] = null;
+        }
+        tamanho = 0;
+    }
+
     private void aumentaCapacidade() {
         if (tamanho == elementos.length) {
             T[] elementosNovos = (T[]) new Object[elementos.length * 2];
