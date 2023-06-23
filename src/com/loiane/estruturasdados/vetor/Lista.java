@@ -87,20 +87,20 @@ public class Lista<T> {
         tamanho--;
     }
 
-    public void remove(T elemento) {
+    public boolean remove(T elemento) {
         int posicao = busca(elemento);
 
         if (posicao > -1) {
-
             validaPosicao(posicao);
 
-            for (int i = posicao; i < tamanho; i++) {
+            for (int i = posicao; i < tamanho-1; i++) {
                 elementos[i] = elementos[i + 1];
             }
-            elementos[tamanho - 1] = null;
+            elementos[tamanho-1] = null;
             tamanho--;
+            return true;
         } else
-            System.out.println("O Elemento informado não existe no vetor!");
+            return false;
     }
 
     private void aumentaCapacidade() {

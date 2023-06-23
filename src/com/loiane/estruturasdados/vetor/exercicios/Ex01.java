@@ -2,6 +2,10 @@ package com.loiane.estruturasdados.vetor.exercicios;
 
 import com.loiane.estruturasdados.vetor.Lista;
 
+/*
+    Melhore a classe Lista e implemente o método contém, semelhante ao método contains da classe ArrayList.
+ */
+
 public class Ex01 {
     public static void main(String[] args){
         Lista<Integer> vetor = new Lista<>(3);
