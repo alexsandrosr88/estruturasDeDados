@@ -110,6 +110,12 @@ public class Lista<T> {
         tamanho = 0;
     }
 
+    public T obtem(int posicao){
+        validaPosicao(posicao);
+
+        return elementos[posicao];
+    }
+
     private void aumentaCapacidade() {
         if (tamanho == elementos.length) {
             T[] elementosNovos = (T[]) new Object[elementos.length * 2];
