@@ -1,7 +1,7 @@
-package com.loiane.estruturasdados.vetor.exercicios;
+package com.cursoloiane.estruturasdados.vetor.exercicios;
 
-import com.loiane.estruturasdados.vetor.Lista;
-import com.loiane.estruturasdados.vetor.teste.Contato;
+import com.cursoloiane.estruturasdados.vetor.teste.Contato;
+import com.cursoloiane.estruturasdados.vetor.Lista;
 
 /*
     Utilize a classe Lista ou Vetor e classe Contato (criada durante as aulas) e desenvolva os seguintes items:

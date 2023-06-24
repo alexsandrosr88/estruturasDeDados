@@ -1,4 +1,4 @@
-package com.loiane.estruturasdados.vetor;
+package com.cursoloiane.estruturasdados.vetor;
 
 public class Vetor {
     private String[] elementos;

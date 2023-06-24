@@ -1,6 +1,6 @@
-package com.loiane.estruturasdados.vetor.exercicios;
+package com.cursoloiane.estruturasdados.vetor.exercicios;
 
-import com.loiane.estruturasdados.vetor.teste.Contato;
+import com.cursoloiane.estruturasdados.vetor.teste.Contato;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,6 @@
-package com.loiane.estruturasdados.vetor.exercicios;
+package com.cursoloiane.estruturasdados.vetor.exercicios;
 
-import com.loiane.estruturasdados.vetor.Lista;
-
-import java.util.ArrayList;
+import com.cursoloiane.estruturasdados.vetor.Lista;
 
 /*
     Melhore a classe e implemente o método obtem(int posicao), onde será possível obter o elemento dada uma posição

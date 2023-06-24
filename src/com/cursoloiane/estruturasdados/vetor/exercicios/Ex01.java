@@ -1,6 +1,6 @@
-package com.loiane.estruturasdados.vetor.exercicios;
+package com.cursoloiane.estruturasdados.vetor.exercicios;
 
-import com.loiane.estruturasdados.vetor.Lista;
+import com.cursoloiane.estruturasdados.vetor.Lista;
 
 /*
     Melhore a classe Lista e implemente o método contém, semelhante ao método contains da classe ArrayList.

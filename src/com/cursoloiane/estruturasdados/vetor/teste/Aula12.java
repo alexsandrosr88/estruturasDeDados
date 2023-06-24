@@ -1,4 +1,4 @@
-package com.loiane.estruturasdados.vetor.teste;
+package com.cursoloiane.estruturasdados.vetor.teste;
 
 import java.util.ArrayList;
 

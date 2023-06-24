@@ -1,9 +1,7 @@
-package com.loiane.estruturasdados.vetor.exercicios;
+package com.cursoloiane.estruturasdados.vetor.exercicios;
 
-import com.loiane.estruturasdados.vetor.Lista;
+import com.cursoloiane.estruturasdados.vetor.Lista;
 
-import java.util.ArrayList;
-import java.util.List;
 /*
     Melhore a classe Lista e implemente o método ultimoIndice, semelhante ao método lastIndexOf da classe ArrayList.
  */

@@ -1,6 +1,4 @@
-package com.loiane.estruturasdados.vetor.teste;
-
-import java.util.Objects;
+package com.cursoloiane.estruturasdados.vetor.teste;
 
 public class Contato {
     private String nome;

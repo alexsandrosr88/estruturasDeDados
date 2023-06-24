@@ -1,7 +1,7 @@
-package com.loiane.estruturasdados.vetor.teste;
+package com.cursoloiane.estruturasdados.vetor.teste;
 
 
-import com.loiane.estruturasdados.vetor.Vetor;
+import com.cursoloiane.estruturasdados.vetor.Vetor;
 
 public class Aula08 {
     public static void main(String[] args) {
