@@ -14,5 +14,36 @@ public class Pilha<T> extends EstruturaEstatica<T> {
         super(capacidade);
     }
 
+    public void empilha(T elemento){
+        super.adiciona(elemento);
+    }
 
+    public T topo(){
+        if(estavazia()) {
+            return null;
+        }
+        return elementos[tamanho-1];
+    }
+
+//    public T desempilhar(){
+//
+//        if(estavazia()){
+//            return null;
+//        }
+//        T elementoRemovido = elementos[tamanho-1];
+//
+//        elementos[tamanho-1] = null;
+//        tamanho--;
+//
+//        return elementoRemovido;
+//    }
+
+    //Forma simplificada
+    public T desempilhar(){
+
+        if(estavazia()){
+            return null;
+        }
+        return elementos[--tamanho];
+    }
 }

@@ -1,8 +1,8 @@
 package com.cursoloiane.estruturasdados.base;
 
 public class EstruturaEstatica<T> {
-    private T[] elementos;
-    private int tamanho;
+    protected T[] elementos;
+    protected int tamanho;
 
     public int getTamanho() {
         return tamanho;
@@ -18,6 +18,9 @@ public class EstruturaEstatica<T> {
         tamanho = 0;
     }
 
+    public boolean estavazia() {
+        return tamanho == 0;
+    }
 
     protected boolean adiciona(T elemento) {
         aumentaCapacidade();
@@ -57,7 +60,7 @@ public class EstruturaEstatica<T> {
         return -1;
     }
 
-    private void aumentaCapacidade() {
+    protected void aumentaCapacidade() {
         if (tamanho == elementos.length) {
 
             T[] novoElementos = (T[]) new Object[tamanho * 2];
