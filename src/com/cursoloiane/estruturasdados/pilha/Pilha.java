@@ -25,19 +25,6 @@ public class Pilha<T> extends EstruturaEstatica<T> {
         return elementos[tamanho-1];
     }
 
-//    public T desempilhar(){
-//
-//        if(estavazia()){
-//            return null;
-//        }
-//        T elementoRemovido = elementos[tamanho-1];
-//
-//        elementos[tamanho-1] = null;
-//        tamanho--;
-//
-//        return elementoRemovido;
-//    }
-
     //Forma simplificada
     public T desempilhar(){
 
@@ -45,5 +32,21 @@ public class Pilha<T> extends EstruturaEstatica<T> {
             return null;
         }
         return elementos[--tamanho];
+    }
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        s.append("|=|");
+        s.append(" \n");
+
+        for (int i = tamanho - 1; i >= 0 ; i--) {
+            if(elementos[i] != null) {
+                s.append(" ");
+                s.append(elementos[i]);
+                s.append("\n");
+            }
+        }
+        s.append("|=|");
+        return s.toString();
     }
 }
