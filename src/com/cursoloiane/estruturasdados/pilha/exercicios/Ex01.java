@@ -23,7 +23,14 @@ public class Ex01 {
             else if(pilha.estavazia())
                 System.out.println("A lista está vazia!");
             else
-                pilha.desempilhar();
+                System.out.println("Elemento desempilhado: "+pilha.desempilhar());
+        }
+        if(pilha.estavazia())
+            System.out.println("Pilha vazia!");
+        else{
+            while(!pilha.estavazia()){
+                System.out.println("Elemento desempilhado: "+pilha.desempilhar());
+            }
         }
         System.out.println(pilha);
     }
