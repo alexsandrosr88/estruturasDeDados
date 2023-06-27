@@ -4,18 +4,19 @@ public class EstruturaEstatica<T> {
     protected T[] elementos;
     protected int tamanho;
 
-    public int getTamanho() {
-        return tamanho;
-    }
-
     public EstruturaEstatica(int capacidade) {
         elementos = (T[]) new Object[capacidade];
         tamanho = 0;
     }
 
     public EstruturaEstatica() {
-        elementos = (T[]) new Object[10];
-        tamanho = 0;
+//        elementos = (T[]) new Object[10];
+//        tamanho = 0;
+        this(10);
+    }
+
+    public int getTamanho() {
+        return tamanho;
     }
 
     public boolean estavazia() {
@@ -24,8 +25,7 @@ public class EstruturaEstatica<T> {
 
     protected boolean adiciona(T elemento) {
         aumentaCapacidade();
-        elementos[tamanho] = elemento;
-        tamanho++;
+        elementos[tamanho++] = elemento;
         return true;
     }
 
@@ -130,7 +130,6 @@ public class EstruturaEstatica<T> {
             tamanho--;
             return true;
         }
-
     }
 
     @Override
