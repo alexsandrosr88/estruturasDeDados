@@ -36,7 +36,7 @@ public class Pilha<T> extends EstruturaEstatica<T> {
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append("|=|");
+        s.append("\n|=|");
         s.append(" \n");
 
         for (int i = tamanho - 1; i >= 0 ; i--) {

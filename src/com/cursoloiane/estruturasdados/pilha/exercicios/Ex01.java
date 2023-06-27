@@ -28,7 +28,10 @@ public class Ex01 {
         if(pilha.estavazia())
             System.out.println("Pilha vazia!");
         else{
+            System.out.println("\n"+pilha+"\n");
             while(!pilha.estavazia()){
+
+
                 System.out.println("Elemento desempilhado: "+pilha.desempilhar());
             }
         }
