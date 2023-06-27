@@ -28,11 +28,13 @@ public class Ex03 {
 
             for (int j = 0; j < 6; j++) {
                 int n = rd.nextInt(10);
-                dia = rd.nextInt(30) + 1;
-                mes = rd.nextInt(11) + 1;
-                ano = rd.nextInt(1998, 2023);
                 s.append(n);
             }
+
+            dia = rd.nextInt(30) + 1;
+            mes = rd.nextInt(11) + 1;
+            ano = rd.nextInt(1998, 2023);
+
             s.append("X");
 
             Livro livro = new Livro(livros[i], s.toString(), LocalDate.of(ano, mes, dia));
@@ -44,14 +46,13 @@ public class Ex03 {
         System.out.println(pilha.desempilhar());
         System.out.println(pilha);
         System.out.println(pilha.obtem(0));
-        Livro livro = new Livro("Effective Java", "850437827X", LocalDate.of(2001,7,7);
+        Livro livro = new Livro("Effective Java", "850437827X", LocalDate.of(2001,7,7));
         System.out.println(pilha.busca(livro));
         System.out.println(pilha.getTamanho());
         System.out.println(pilha.remove(0));
+        pilha.limpar();
         System.out.println(pilha);
-        
 
     }
-
 }
 
