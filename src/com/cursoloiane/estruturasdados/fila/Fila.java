@@ -13,7 +13,6 @@ public class Fila<T> extends EstruturaEstatica<T> {
     }
 
     public void enfileira(T elemento){
-        aumentaCapacidade();
         adiciona(elemento);
     }
     public T espiar(){
@@ -21,18 +20,16 @@ public class Fila<T> extends EstruturaEstatica<T> {
     }
 
     public T desenfileira(){
-        T elemento = elementos[0];
+        final int POS = 0;
 
-        if(tamanho == 0){
-            elementos[0] = null;
-            return elemento;
+        if(estavazia()){
+            return null;
         }
 
-        for(int i = 0; i < tamanho; i++){
-            elementos[i] = elementos[i+1];
-        }
-        tamanho--;
+        T elementoASerRemovido = elementos[POS];
 
-        return elemento;
+        remove(POS);
+
+        return elementoASerRemovido;
     }
 }

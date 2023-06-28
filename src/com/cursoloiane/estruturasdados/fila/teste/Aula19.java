@@ -1,4 +1,4 @@
-package com.cursoloiane.estruturasdados.fila.exercicios;
+package com.cursoloiane.estruturasdados.fila.teste;
 
 import com.cursoloiane.estruturasdados.fila.Fila;
 
