@@ -5,6 +5,8 @@ public class Documento implements Comparable<Documento>{
     private int qtdfolhas;
 
     public Documento() {
+        nome = "";
+        qtdfolhas = 0;
     }
 
     public Documento(String nome, int qtdfolhas) {
