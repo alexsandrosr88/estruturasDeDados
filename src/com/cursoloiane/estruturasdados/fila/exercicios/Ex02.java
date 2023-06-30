@@ -15,14 +15,16 @@ public class Ex02 {
     public static void main(String[] args) {
         FilaComPrioridade<Pessoa> filaComPrioridade = new FilaComPrioridade<>();
 
-        filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano1", 1));
+        filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano1", 2));
         filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano2", 1));
         filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano3", 2));
         filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano4", 1));
-        filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano5", 2));
+        filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano5", 1));
         filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano6", 1));
-        filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano6", 1));
-        filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano7", 1));
+//        filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano7", 1));
+//        filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano8", 1));
+//        filaComPrioridade.enfileiraCada3Prioridades(new Pessoa("fulano9", 2));
+
 
         System.out.println(filaComPrioridade);
 
